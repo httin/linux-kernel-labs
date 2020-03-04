@@ -1,0 +1,9 @@
+#!/bin/sh
+
+device=kbd
+type=c
+major=42
+minor=0
+
+rm -fv /dev/${device}
+mknod /dev/${device} $type $major $minor && ls -alrti /dev/${device}
